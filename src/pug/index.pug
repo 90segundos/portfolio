@@ -4,9 +4,9 @@ html(lang='es')
     meta(charset='utf-8')
     title Portfolio
     link(rel="stylesheet", href="assets/css/normalize.css")
-    link(rel="stylesheet", href="assets/css/style.css")
+    link(rel="stylesheet", href="assets/css/main.css")
   body
-    header.main-header
+    header.main-header.is-animatable
       h1 header
     div.main-content
       p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -20,3 +20,5 @@ html(lang='es')
             - i++
     // javascript
     script(type="text/javascript" src="assets/js/main.js")
+    script(type="text/javascript").
+       activate('.is-animatable');
