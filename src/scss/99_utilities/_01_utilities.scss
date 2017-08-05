@@ -13,12 +13,10 @@
     color: $value;
   }
 }
-$i: 0;
-@each $value in $s-color-greyscale {
-  .u-color-grey-#{$i}{
+@each $key, $value in $s-color-greyscale {
+  .u-color-grey-#{$key}{
     color: $value;
   }
-  $i: $i + 1;
 }
 
 // Background-color
@@ -28,12 +26,10 @@ $i: 0;
   }
 }
 
-$i: 0;
-@each $value in $s-color-greyscale {
-  .u-background-color-grey-#{$i}{
+@each $key,$value in $s-color-greyscale {
+  .u-background-color-grey-#{$key}{
     background-color: $value;
   }
-  $i: $i + 1;
 }
 
 // Text alignment
