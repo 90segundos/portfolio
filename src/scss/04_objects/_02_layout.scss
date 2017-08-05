@@ -1,0 +1,58 @@
+// OBJECT
+// o-layout
+
+/*----------------[Variables]----------------*/
+
+$o-layout-columns: 12;
+$o-layout-sizes: (
+  'sm': 100%,
+  'md': 640px,
+  'lg': 992px
+);
+
+/*----------------[Variables]----------------*/
+
+.o-row {
+  width: 100%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: flex-start;
+  @each $key, $value in $o-layout-sizes {
+    @media (min-width: map-get($s-breakpoints, #{$key})){
+      max-width: map-get($o-layout-sizes, #{$key});
+    }
+  }
+  &--fluid {
+    max-width: unset;
+  }
+  &--vertical-flow {
+    flex-direction: row;
+  }
+  &--vertical-center {
+    align-items: center;
+    align-content: center;
+  }
+  &--center {
+    justify-content: center;
+  }
+}
+
+.o-col {
+
+  @for $i from 1 through $o-layout-columns {
+    &--order-#{$i} {
+      order: $i;
+    }
+  }
+}
+
+@for $i from 1 through $o-layout-columns {
+  .o-col-#{$i} {
+    width: (100% / $o-layout-columns) * $i;
+  }
+}

@@ -1,0 +1,20 @@
+// Object
+// o-section
+
+/*----------------[ Variables ]----------------*/
+
+$o-section__padding-bottom: (
+  'xs':10px,
+  'sm': 20px,
+  'md':40px
+);
+
+/*----------------[ Style ]----------------*/
+
+.o-section {
+  @each $key, $value in $o-section__padding-bottom {
+    @media (min-width: map-get($s-breakpoints, #{$key})){
+      padding-bottom: map-get($o-section__padding-bottom, #{$key});
+    }
+  }
+}

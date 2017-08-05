@@ -1,3 +1,5 @@
+- var activate_items = ['.is-animatable','anim']
+
 doctype
 html(lang='es')
   head
@@ -6,19 +8,42 @@ html(lang='es')
     link(rel="stylesheet", href="assets/css/normalize.css")
     link(rel="stylesheet", href="assets/css/main.css")
   body
-    header.main-header.is-animatable
-      h1 header
-    div.main-content
-      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    footer.main-footer
-      nav.footer-nav
-        ul.footer-nav__list
+    header(class="o-header o-row o-row--fluid c-main-header")
+      
+      div(class="o-col o-col-3")
+        
+        div(class="logo")        
+          img(class="logo_img" src="assets/img/" alt="logo")
+      // /.o-col
+      div(class="o-col o-col-9")
+      
+      // /.o-col
+    // /.o-header
+
+    div(class="o-main-content u-background-color-gray-2")
+      
+      section(class="o-section o-row")
+        
+        div(class="o-col o-col-12")
+          
+          h1(class="c-heading is-animatable")
+            span(class="u-font-size-2xl") Alejandro Sotoca Pinilla
+            br
+            .
+              Curriculum vitae
+          article(class="o-section")
+            p(class="is-animatable").
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    
+    footer(class="main-footer")
+      nav(class="footer-nav")
+        ul(class="footer-nav__list")
           - var i = 0
-          while i < 4  
-            li.footer-nav__item
-              a.footer-nav__link(href="#") link
+          while i < 4
+            li(class="footer-nav__item")
+              a(class="footer-nav__link" href="#") link
             - i++
     // javascript
     script(type="text/javascript" src="assets/js/main.js")
     script(type="text/javascript").
-       activate('.is-animatable');
+      activate('#{activate_items}');

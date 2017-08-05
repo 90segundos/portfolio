@@ -36,5 +36,4 @@ function toggleActive(element){
 
 $(document).ready(function(){
   console.log('ready');
-
 });

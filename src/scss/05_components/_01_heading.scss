@@ -1,0 +1,7 @@
+// COMPONENT:  C-HEADING
+
+.c-heading {
+  @include font-size(map-get($s-font-sizes,'xl'), map-get($s-font-sizes,'xl'));
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+}

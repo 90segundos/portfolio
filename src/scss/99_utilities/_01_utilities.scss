@@ -1,0 +1,60 @@
+// Utilities
+
+// Font size
+@each $key, $value in $s-font-sizes {
+  .u-font-size-#{$key} {
+    @include font-size($value);
+  }
+}
+
+// Color
+@each $key, $value in $s-brand-colors {
+  .u-color-#{$key}{
+    color: $value;
+  }
+}
+$i: 0;
+@each $value in $s-color-greyscale {
+  .u-color-grey-#{$i}{
+    color: $value;
+  }
+  $i: $i + 1;
+}
+
+// Background-color
+@each $key, $value in $s-brand-colors {
+  .u-background-color-#{$key}{
+    background-color: $value;
+  }
+}
+
+$i: 0;
+@each $value in $s-color-greyscale {
+  .u-background-color-grey-#{$i}{
+    background-color: $value;
+  }
+  $i: $i + 1;
+}
+
+// Text alignment
+.u-align-right {
+  text-align: right;
+}
+.u-align-center {
+  text-align: center;
+}
+.u-align-left {
+  text-align: left;
+}
+
+// Image sizing
+.u-img-max-100 {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.u-img-100 {
+  display: block;
+  width: 100%;
+  height: auto;
+}

@@ -74,4 +74,4 @@ gulp.task('scripts', function() {
 gulp.task('build', ['compile_pug','compile_sass','img_minify','scripts']);
 
 // default
-gulp.task('default', ['compile_pug', 'compile_sass', 'watch']);
+gulp.task('default', ['compile_pug', 'compile_sass', 'scripts', 'watch']);

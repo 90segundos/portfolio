@@ -1,0 +1,17 @@
+/*************************************
+
+    Mixins
+
+**************************************/
+
+// font-size
+@mixin font-size($font-size: $s-font-size-sm, $line-height : ''){
+
+  @if $line-height == '' {
+    $line-height: $font-size * 1.2    
+  }
+
+  font-size: $font-size;
+  line-height: $line-height;
+
+}

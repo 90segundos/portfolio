@@ -1,0 +1,13 @@
+// Component
+// c-main-header
+
+/*----------------[Variables]----------------*/
+
+$c-main-header__height: 40px;
+$c-main-header__background-color: $s-color-primary;
+
+/*----------------[Variables]----------------*/
+.c-main-header {
+  height: $c-main-header__height;
+  background-color: $c-main-header__background-color;
+}

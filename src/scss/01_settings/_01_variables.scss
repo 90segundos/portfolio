@@ -1,2 +1,80 @@
+// Global variables
+
+// breakpoints
+$s-breakpoint-xs: 480px;
+$s-breakpoint-sm: 768px;
+$s-breakpoint-md: 992px;
+$s-breakpoint-lg: 1200px;
+$s-breakpoint-xl: 1400px;
+
+$s-breakpoints: (
+  'xs': $s-breakpoint-xs,
+  'sm': $s-breakpoint-sm,
+  'md': $s-breakpoint-md,
+  'lg': $s-breakpoint-lg,
+  'xl': $s-breakpoint-xl
+);
+
 // Variables
 $s-spacing-unit: 20px;
+
+// Color
+$s-color-dark: #444444;
+$s-color-light: #ffffff;
+
+$s-color-grey-1: darken($s-color-light, 10);
+$s-color-grey-2: darken($s-color-light, 20);
+$s-color-grey-3: darken($s-color-light, 30);
+$s-color-grey-4: darken($s-color-light, 40);
+$s-color-grey-5: darken($s-color-light, 50);
+$s-color-grey-6: darken($s-color-light, 60);
+$s-color-grey-7: darken($s-color-light, 70);
+$s-color-grey-8: darken($s-color-light, 80);
+$s-color-grey-9: darken($s-color-light, 90);
+
+$s-color-greyscale: (
+  $s-color-grey-1,
+  $s-color-grey-2,
+  $s-color-grey-3,
+  $s-color-grey-4,
+  $s-color-grey-5,
+  $s-color-grey-6,
+  $s-color-grey-7,
+  $s-color-grey-8,
+  $s-color-grey-9
+);
+
+$s-color-primary: #166870;
+$-color-primary-light: lighten($s-color-primary, 10%);
+$s-color-primary-dark: desaturate(darken($s-color-primary,10%), 10);
+
+$s-color-secondary: #eeb64a;
+$-color-secondary-light: lighten($s-color-secondary, 10%);
+$s-color-secondary-dark: desaturate(darken($s-color-secondary,10%), 10);
+
+$s-color-tertiary: #ee5555;
+$-color-tertiary-light: lighten($s-color-tertiary, 10%);
+$s-color-tertiary-dark: desaturate(darken($s-color-tertiary,10%), 10);
+
+$s-brand-colors: (
+  'primary' : $s-color-primary,
+  'secondary' : $s-color-secondary,
+  'tertiary' : $s-color-tertiary
+);
+
+// Fonts
+$s-font-size-xs: 10px;
+$s-font-size-sm: 14px;
+$s-font-size-md: 18px;
+$s-font-size-lg: 22px;
+$s-font-size-xl: 30px;
+$s-font-size-2xl: 60px;
+
+$s-font-sizes: (
+  'xs':$s-font-size-xs,
+  'sm':$s-font-size-sm,
+  'md':$s-font-size-md,
+  'lg':$s-font-size-lg,
+  'xl':$s-font-size-xl,
+  '2xl':$s-font-size-2xl,
+)

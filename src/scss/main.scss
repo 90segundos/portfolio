@@ -1,6 +1,25 @@
 @charset "UTF-8";
 
+// Settings
 @import "01_settings/01_variables";
 @import "01_settings/02_fonts";
 
-@import "02_elements/01_reset";
+// Tools
+@import "02_tools/01_mixins";
+
+// Element
+@import "03_elements/01_reset";
+
+// Objects
+@import "04_objects/01_header";
+@import "04_objects/02_layout";
+@import "04_objects/03_main-content";
+@import "04_objects/04_section";
+
+// Components
+@import "05_components/01_heading";
+@import "05_components/02_main-header";
+
+
+// Utilities
+@import "99_utilities/01_utilities";
