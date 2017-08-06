@@ -5,14 +5,30 @@
 
 $o-layout__columns: 12;
 $o-layout__padding: 15px;
+$o-layout__breakpoints: (
+  'sm': 768px,
+  'md': 992px,
+  'xl': 1200px
+  );
 
 /*----------------[Variables]----------------*/
 
 .o-container {
   position: relative;
-  max-width: 100%;
+  width: 100%;
+  margin: auto;
   padding-left: $o-layout__padding;
   padding-right: $o-layout__padding;
+
+  @each $key, $value in $o-layout__breakpoints {
+    @media (min-width: map-get($s-breakpoints, $key)) {
+      max-width: $value;
+    }
+  }
+
+  &--fluid {
+    max-width: 100%;
+  }
 }
 
 .o-row {
@@ -32,6 +48,9 @@ $o-layout__padding: 15px;
   &--vertical-center {
     align-items: center;
     align-content: center;
+  }
+  &--align-center {
+    justify-content: center;
   }
   &--row-reverse {
     flex-flow: row-reverse;

@@ -13,10 +13,10 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: $s-font-body;
-  color: $s-color-dark;
+  @include font-size($s-font-size-sm);
   -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-  font-size: $s-font-size-sm;
+  color: $s-color-dark;
   &.is-reversed {
     color: $s-color-light;
   }
@@ -28,15 +28,12 @@ h3,
 h4,
 h5,
 h6 {
+  font-weight: 400;
   font-family: $s-font-heading;
   margin-top: 0;
   &:last-child {
     margin-bottom: 0;
   }
-}
-
-h1, h2, h3 {
-  font-weight: 500;
 }
 
 p {

@@ -67,7 +67,7 @@ gulp.task('scripts', function() {
 gulp.task('watch', function () {
   gulp.watch(directories.pug_src, ['compile_pug']);
   gulp.watch(directories.sass_src, ['compile_sass']);
-  gulp.watch(directories.img_src, ['img_minify']);
+  //gulp.watch(directories.img_src, ['img_minify']);
   gulp.watch(directories.js_src, ['scripts']);
 });
 

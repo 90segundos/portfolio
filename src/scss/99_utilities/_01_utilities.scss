@@ -7,8 +7,12 @@
   }
 }
 
-// Font weight
+// Font family
+.u-font-family-monospace {
+  font-family: $s-font-monospace; 
+}
 
+// Font weight
 .u-font-weight-normal {
   font-weight: 400;
 }

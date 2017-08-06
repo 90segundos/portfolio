@@ -4,6 +4,6 @@
   @include font-size(map-get($s-font-sizes,'xl'), map-get($s-font-sizes,'xl'));
 }
 .c-subheading {
-  font-weight: 400;
   margin-top: 0;
+  font-size: $s-font-size-md;
 }

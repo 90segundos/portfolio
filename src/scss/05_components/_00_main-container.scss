@@ -1,0 +1,12 @@
+// COMPONENT
+// c-main-container
+
+/*----------------[Variables]----------------*/
+
+$c-main-container__background-color: lighten($s-color-dark,10);
+
+/*----------------[Variables]----------------*/
+
+.c-main-container {
+  background-color: $c-main-container__background-color;
+}

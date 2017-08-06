@@ -19,22 +19,22 @@ $s-breakpoints: (
 $s-spacing-unit: 20px;
 
 // Color
-$s-color-dark: #444444;
+$s-color-dark: #202226;
 $s-color-light: #ffffff;
 
-$s-color-grey-02: darken($s-color-light, 02);
-$s-color-grey-04: darken($s-color-light, 04);
-$s-color-grey-06: darken($s-color-light, 06);
-$s-color-grey-08: darken($s-color-light, 08);
-$s-color-grey-10: darken($s-color-light, 10);
-$s-color-grey-20: darken($s-color-light, 20);
-$s-color-grey-30: darken($s-color-light, 30);
-$s-color-grey-40: darken($s-color-light, 40);
-$s-color-grey-50: darken($s-color-light, 50);
-$s-color-grey-60: darken($s-color-light, 60);
-$s-color-grey-70: darken($s-color-light, 70);
-$s-color-grey-80: darken($s-color-light, 80);
-$s-color-grey-90: darken($s-color-light, 90);
+$s-color-grey-02: lighten($s-color-dark, 98);
+$s-color-grey-04: lighten($s-color-dark, 96);
+$s-color-grey-06: lighten($s-color-dark, 94);
+$s-color-grey-08: lighten($s-color-dark, 92);
+$s-color-grey-10: lighten($s-color-dark, 90);
+$s-color-grey-20: lighten($s-color-dark, 80);
+$s-color-grey-30: lighten($s-color-dark, 70);
+$s-color-grey-40: lighten($s-color-dark, 60);
+$s-color-grey-50: lighten($s-color-dark, 50);
+$s-color-grey-60: lighten($s-color-dark, 40);
+$s-color-grey-70: lighten($s-color-dark, 30);
+$s-color-grey-80: lighten($s-color-dark, 20);
+$s-color-grey-90: lighten($s-color-dark, 10);
 
 $s-color-greyscale: (
   '02': $s-color-grey-02,
@@ -52,22 +52,28 @@ $s-color-greyscale: (
   '90': $s-color-grey-90
 );
 
-$s-color-primary: #166870;
-$-color-primary-light: lighten($s-color-primary, 10%);
+$s-color-primary: #009d77;
+$s-color-primary-light: lighten($s-color-primary, 10%);
 $s-color-primary-dark: desaturate(darken($s-color-primary,10%), 10);
 
 $s-color-secondary: #eeb64a;
-$-color-secondary-light: lighten($s-color-secondary, 10%);
+$s-color-secondary-light: lighten($s-color-secondary, 10%);
 $s-color-secondary-dark: desaturate(darken($s-color-secondary,10%), 10);
 
 $s-color-tertiary: #ee5555;
-$-color-tertiary-light: lighten($s-color-tertiary, 10%);
-$s-color-tertiary-dark: desaturate(darken($s-color-tertiary,10%), 10);
+$s-color-tertiary-light: lighten($s-color-tertiary, 10%);
+$s-color-tertiary-dark: desaturate(lighten($s-color-tertiary,10%), 10);
 
 $s-brand-colors: (
   'primary' : $s-color-primary,
+  'primary-light' : $s-color-primary-light,
+  'primary-dark' : $s-color-primary-dark,
   'secondary' : $s-color-secondary,
-  'tertiary' : $s-color-tertiary
+  'secondary-light' : $s-color-secondary-light,
+  'secondary-dark' : $s-color-secondary-dark,
+  'tertiary' : $s-color-tertiary,
+  'tertiary-light' : $s-color-tertiary-light,
+  'tertiary-dark' : $s-color-tertiary-dark
 );
 
 // Fonts
