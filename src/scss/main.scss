@@ -18,12 +18,13 @@
 @import "04_objects/04_section";
 
 // Components
-@import "05_components/01_heading";
+@import "05_components/00_heading";
+@import "05_components/00_main-menu";
 @import "05_components/00_main-nav";
 @import "05_components/00_nav-button";
-@import "05_components/02_main-header";
-@import "05_components/03_main-footer";
-@import "05_components/04_logo";
+@import "05_components/00_main-header";
+@import "05_components/00_main-footer";
+@import "05_components/00_logo";
 
 // Utilities
 @import "99_utilities/01_utilities";

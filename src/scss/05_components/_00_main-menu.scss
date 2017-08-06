@@ -1,0 +1,23 @@
+// Component
+// c-main-menu
+
+/*----------------[Variables]----------------*/
+
+$c-main-menu__background-color: rgba($s-color-dark,0.2);
+
+/*----------------[Style]----------------*/
+
+.c-main-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: $c-main-menu__background-color;
+}
+
+.c-main-menu__list {
+
+}
+
+.c-main-menu__item {
+
+}

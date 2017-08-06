@@ -32,7 +32,7 @@ gulp.task('compile_pug', function buildHTML() {
   return gulp.src(directories.pug_src)
   .pipe(pug({
     'pretty':true,
-    'filename':'index.html'
+    'compileDebug': true
   }))
   .pipe(gulp.dest(directories.pug_build))
   .pipe(notify("HTML generated"));
@@ -77,4 +77,4 @@ gulp.task('watch', function () {
 gulp.task('build', ['compile_pug','compile_sass','img_minify','scripts']);
 
 // default
-gulp.task('default', ['compile_pug', 'compile_sass', 'scripts', 'img_minify', 'watch']);
+gulp.task('default', ['compile_pug', 'compile_sass', 'scripts', 'watch']);

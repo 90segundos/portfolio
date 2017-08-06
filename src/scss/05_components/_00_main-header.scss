@@ -3,11 +3,12 @@
 
 /*----------------[Variables]----------------*/
 
-$c-main-header__background-color: $s-color-grey-04;
+$c-main-header__background-color: $s-color-grey-10;
 
 /*----------------[Variables]----------------*/
 .c-main-header {
   background-color: $c-main-header__background-color;
+  align-items: center;
   max-width: 100%;
   @each $key, $value in $s-header-heights {
     @media (min-width: map-get($s-breakpoints,$key)){

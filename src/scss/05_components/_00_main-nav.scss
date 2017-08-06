@@ -6,9 +6,18 @@
 }
 
 .c-main-nav__list {
-  
+  background-color: rgba($s-color-dark, 0.2);
 }
 
 .c-main-nav__item {
-
+  display: inline;
+  font-size: 0;
+  letter-spacing: 0;
+  margin-right: $s-spacing-unit/2;
+  &:last-child{
+    margin-right: 0;
+  }
+}
+.c-main-nav__link {
+  font-size: $s-font-size-sm;
 }
