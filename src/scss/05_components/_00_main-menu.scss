@@ -3,14 +3,13 @@
 
 /*----------------[Variables]----------------*/
 
-$c-main-menu__background-color: rgba($s-color-dark,0.2);
+$c-main-menu__background-color: transparent;
 
 /*----------------[Style]----------------*/
 
 .c-main-menu {
-  display: flex;
-  align-items: center;
   justify-content: flex-end;
+  align-items: center;
   background-color: $c-main-menu__background-color;
 }
 
@@ -19,5 +18,7 @@ $c-main-menu__background-color: rgba($s-color-dark,0.2);
 }
 
 .c-main-menu__item {
+}
 
+.c-main-menu__link {
 }

@@ -1,0 +1,31 @@
+// Component
+// c-nav
+
+/*----------------[ Variables ]----------------*/
+
+$c-nav__link-color: $s-color-light;
+
+/*----------------[ Style ]----------------*/
+
+.c-nav {
+
+}
+
+.c-nav__list {
+
+}
+
+.c-nav__item {
+  display: inline;
+  font-size: 0;
+  letter-spacing: 0;
+  margin-right: $s-spacing-unit/2;
+  color: $c-nav__link-color;
+
+  &:last-child{
+    margin-right: 0;
+  }
+}
+.c-nav__link {
+  font-size: $s-font-size-sm;
+}

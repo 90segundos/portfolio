@@ -7,28 +7,33 @@ html(lang='es')
     title Portfolio
     link(rel="stylesheet", href="assets/css/normalize.css")
     link(rel="stylesheet", href="assets/css/main.css")
-  body
-    
-    // main header
-    include _partials/header.pug
-    
-    div(class="o-main-content u-background-color-grey-04")
+  body(class="is-reversed")
+    div(class="o-container")
       
-      section(class="o-section o-row")
-        
-        div(class="o-col o-col-12")
+      // main header
+      include _partials/header-simple.pug
+      
+      div(class="o-main-content o-row u-background-color-grey-80")
+        div(class="o-col")
           
-          h1(class="c-heading is-animatable")
-            span(class="u-font-size-2xl") Alejandro Sotoca Pinilla
-            br
-            .
-              Curriculum vitae
-          article(class="o-section")
-            p(class="is-animatable").
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    
-    // main footer
-    include _partials/footer.pug
+          section(class="o-section o-row")
+            
+            div(class="o-col")
+              
+              header(class="o-section u-align-center is-animatable")
+                h1(class="c-heading is-animatable u-no-margin")
+                  span(class="u-font-size-2xl") Alejandro Sotoca Pinilla
+                h2
+                  span(class="c-subheading") Curriculum vitae
+              // /header
+              
+              article(class="o-section")
+                p(class="is-animatable").
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              // /article
+              
+      // main footer
+      include _partials/footer.pug
     
     // javascript
     script(type="text/javascript" src="assets/js/main.js")

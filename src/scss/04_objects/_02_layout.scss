@@ -3,33 +3,29 @@
 
 /*----------------[Variables]----------------*/
 
-$o-layout-columns: 12;
-$o-layout-sizes: (
-  'sm': 100%,
-  'md': 992px,
-  'lg': 1180px
-);
+$o-layout__columns: 12;
+$o-layout__padding: 15px;
 
 /*----------------[Variables]----------------*/
 
-.o-row {
-  width: 100%;
-  margin: auto;
+.o-container {
   position: relative;
+  max-width: 100%;
+  padding-left: $o-layout__padding;
+  padding-right: $o-layout__padding;
+}
+
+.o-row {
+  position: relative;
+  margin-left: - $o-layout__padding;
+  margin-right: - $o-layout__padding;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
   align-content: flex-start;
-  @each $key, $value in $o-layout-sizes {
-    @media (min-width: map-get($s-breakpoints, #{$key})){
-      max-width: map-get($o-layout-sizes, #{$key});
-    }
-  }
-  &--fluid {
-    max-width: unset;
-  }
+
   &--vertical-flow {
     flex-direction: row;
   }
@@ -37,22 +33,27 @@ $o-layout-sizes: (
     align-items: center;
     align-content: center;
   }
-  &--center {
-    justify-content: center;
+  &--row-reverse {
+    flex-flow: row-reverse;
+  }
+  &--column-reverse {
+    flex-flow: column-reverse;
   }
 }
 
 .o-col {
-
-  @for $i from 1 through $o-layout-columns {
+  max-width: 100%;
+  padding-left: $o-layout__padding;
+  padding-right: $o-layout__padding;
+  @for $i from 1 through $o-layout__columns {
     &--order-#{$i} {
       order: $i;
     }
   }
 }
 
-@for $i from 1 through $o-layout-columns {
+@for $i from 1 through $o-layout__columns {
   .o-col-#{$i} {
-    width: (100% / $o-layout-columns) * $i;
+    width: (100% / $o-layout__columns) * $i;
   }
 }

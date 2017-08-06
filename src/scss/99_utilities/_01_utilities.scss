@@ -7,6 +7,16 @@
   }
 }
 
+// Font weight
+
+.u-font-weight-normal {
+  font-weight: 400;
+}
+
+.u-font-weight-bold {
+  font-weight: 500;
+}
+
 // Color
 @each $key, $value in $s-brand-colors {
   .u-color-#{$key}{
@@ -53,4 +63,14 @@
   display: block;
   width: 100%;
   height: auto;
+}
+
+// Margin
+.u-no-margin {
+  margin: 0;
+}
+
+// Padding
+.u-no-padding {
+  padding: 0;
 }

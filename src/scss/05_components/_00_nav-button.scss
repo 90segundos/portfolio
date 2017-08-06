@@ -4,7 +4,7 @@
 .c-nav-button__path {
   transition: all 500ms ease;
   transform-origin: center center;
-  fill: $s-color-grey-70;
+  fill: $s-color-light;
   &--1 {
     transform: rotate(0) translateY(-7px);
   }
@@ -18,8 +18,6 @@
 }
 
 .c-nav-button {
-  height: 30px;
-  width: 30px;
   &.is-active {
     & .c-nav-button__path {
       &--1 {
