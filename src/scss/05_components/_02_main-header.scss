@@ -3,11 +3,15 @@
 
 /*----------------[Variables]----------------*/
 
-$c-main-header__height: 40px;
-$c-main-header__background-color: $s-color-primary;
+$c-main-header__background-color: $s-color-grey-04;
 
 /*----------------[Variables]----------------*/
 .c-main-header {
-  height: $c-main-header__height;
   background-color: $c-main-header__background-color;
+  max-width: 100%;
+  @each $key, $value in $s-header-heights {
+    @media (min-width: map-get($s-breakpoints,$key)){
+      height: map-get($s-header-heights, $key);
+    }
+  }
 }

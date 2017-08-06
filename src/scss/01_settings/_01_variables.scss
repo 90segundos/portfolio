@@ -85,4 +85,30 @@ $s-font-sizes: (
   'lg':$s-font-size-lg,
   'xl':$s-font-size-xl,
   '2xl':$s-font-size-2xl,
-)
+);
+
+// header sizing
+$s-header-height-sm: 50px;
+$s-header-height-md: 50px;
+$s-header-height-lg: 50px;
+$s-header-height-xl: 50px;
+
+$s-header-heights: (
+  'sm':$s-header-height-sm,
+  'md':$s-header-height-md,
+  'lg':$s-header-height-lg,
+  'xl':$s-header-height-xl
+);
+
+// Footer sizing
+$s-footer-height-sm: 300px;
+$s-footer-height-md: 200px;
+$s-footer-height-lg: 100px;
+$s-footer-height-xl: 100px;
+
+$s-footer-heights: (
+  'sm':$s-footer-height-sm,
+  'md':$s-footer-height-md,
+  'lg':$s-footer-height-lg,
+  'xl':$s-footer-height-xl
+);

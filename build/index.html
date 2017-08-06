@@ -7,12 +7,27 @@
     <link rel="stylesheet" href="assets/css/main.css">
   </head>
   <body>
-    <header class="o-header o-row o-row--fluid c-main-header">
+    <!-- main header-->
+    <header class="o-header o-row c-main-header">
       <div class="o-col o-col-3">
         <div class="logo">       <img class="logo_img" src="assets/img/" alt="logo"></div>
       </div>
       <!-- /.o-col-->
-      <div class="o-col o-col-9"></div>
+      <div class="o-col o-col-9 o-row">
+        <button class="c-nav-button o-col o-col--order-2">
+          <svg class="c-nav-button__svg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+          	<path class="c-nav-button__path c-nav-button__path--1" d="M5 14h20v2h-20z"/>
+          	<path class="c-nav-button__path c-nav-button__path--2"d="M5 14h20v2h-20z"/>
+          	<path class="c-nav-button__path c-nav-button__path--3"d="M5 14h20v2h-20z"/>
+          </svg>
+          
+        </button>
+        <nav class="c-main-nav o-col o-col-order--1">
+          <ul class="c-main-nav__list">
+            <li class="c-main-nav__item o-row"><a class="c-main-nav__link" href="#" title="">link</a><a class="c-main-nav__link" href="#" title="">link</a><a class="c-main-nav__link" href="#" title="">link</a><a class="c-main-nav__link" href="#" title="">link</a></li>
+          </ul>
+        </nav>
+      </div>
       <!-- /.o-col-->
     </header>
     <!-- /.o-header-->
@@ -29,16 +44,20 @@
         </div>
       </section>
     </div>
-    <footer class="main-footer">
-      <nav class="footer-nav">
-        <ul class="footer-nav__list">
-          <li class="footer-nav__item"><a class="footer-nav__link" href="#">link</a></li>
-          <li class="footer-nav__item"><a class="footer-nav__link" href="#">link</a></li>
-          <li class="footer-nav__item"><a class="footer-nav__link" href="#">link</a></li>
-          <li class="footer-nav__item"><a class="footer-nav__link" href="#">link</a></li>
-        </ul>
-      </nav>
+    <!-- main footer-->
+    <footer class="o-footer c-main-footer">
+      <div class="o-row">
+        <nav class="footer-nav o-col o-col-4">
+          <ul class="footer-nav__list">
+            <li class="footer-nav__item"><a class="footer-nav__link" href="#">link</a></li>
+            <li class="footer-nav__item"><a class="footer-nav__link" href="#">link</a></li>
+            <li class="footer-nav__item"><a class="footer-nav__link" href="#">link</a></li>
+            <li class="footer-nav__item"><a class="footer-nav__link" href="#">link</a></li>
+          </ul>
+        </nav>
+      </div>
     </footer>
+    <!-- /.c-main-footer-->
     <!-- javascript-->
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script type="text/javascript">activate('.is-animatable,anim');</script>

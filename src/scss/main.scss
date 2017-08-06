@@ -12,14 +12,18 @@
 
 // Objects
 @import "04_objects/01_header";
+@import "04_objects/02_footer";
 @import "04_objects/02_layout";
 @import "04_objects/03_main-content";
 @import "04_objects/04_section";
 
 // Components
 @import "05_components/01_heading";
+@import "05_components/00_main-nav";
+@import "05_components/00_nav-button";
 @import "05_components/02_main-header";
-
+@import "05_components/03_main-footer";
+@import "05_components/04_logo";
 
 // Utilities
 @import "99_utilities/01_utilities";

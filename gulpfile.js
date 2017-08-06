@@ -21,7 +21,8 @@ var directories = {
   'sass_build': 'build/assets/css',
   'js_src':     ['src/js/**/*.js'],
   'js_build':   'build/assets/js',
-  'img':        'build/assets/img'
+  'img_src':    'build/assets/img',
+  'img_build':  'build/assets/img'
 }
 
 /* ---------------------[ tasks ]----------------------- */
@@ -30,7 +31,8 @@ var directories = {
 gulp.task('compile_pug', function buildHTML() {
   return gulp.src(directories.pug_src)
   .pipe(pug({
-    'pretty':true
+    'pretty':true,
+    'filename':'index.html'
   }))
   .pipe(gulp.dest(directories.pug_build))
   .pipe(notify("HTML generated"));
@@ -48,17 +50,10 @@ gulp.task('compile_sass', function () {
 
 // img_minify
 gulp.task('img_minify', function () {
-  return gulp.src(directories.img)
+  return gulp.src(directories.img_src)
     .pipe(imagemin())
-    .pipe(gulp.dest(directories.img))
+    .pipe(gulp.dest(directories.img_build))
     .pipe(notify("Images compressed"));
-});
-
-// watch
-gulp.task('watch', function () {
-  gulp.watch(directories.pug_src, ['compile_pug']);
-  gulp.watch(directories.sass_src, ['compile_sass']);
-  gulp.watch(directories.img, ['img_minify']);
 });
 
 // concat_scripts
@@ -68,10 +63,18 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest(directories.js_build));
 });
 
+// watch
+gulp.task('watch', function () {
+  gulp.watch(directories.pug_src, ['compile_pug']);
+  gulp.watch(directories.sass_src, ['compile_sass']);
+  gulp.watch(directories.img_src, ['img_minify']);
+  gulp.watch(directories.js_src, ['scripts']);
+});
+
 /* ---------------------[ task collections ]----------------------- */
 
 // build
 gulp.task('build', ['compile_pug','compile_sass','img_minify','scripts']);
 
 // default
-gulp.task('default', ['compile_pug', 'compile_sass', 'scripts', 'watch']);
+gulp.task('default', ['compile_pug', 'compile_sass', 'scripts', 'img_minify', 'watch']);

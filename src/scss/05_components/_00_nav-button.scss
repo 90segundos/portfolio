@@ -1,0 +1,37 @@
+// Component
+// c-nav-button
+
+.c-nav-button__path {
+  transition: all 500ms ease;
+  transform-origin: center center;
+  fill: $s-color-grey-70;
+  &--1 {
+    transform: rotate(0) translateY(-7px);
+  }
+  &--2 {
+    transform: rotate(0) translateY(0);
+    opacity: 1;
+  }
+  &--3 {
+    transform: rotate(0) translateY(7px);
+  }
+}
+
+.c-nav-button {
+  height: 30px;
+  width: 30px;
+  &.is-active {
+    & .c-nav-button__path {
+      &--1 {
+        transform: rotate(45deg) translateY(0);
+      }
+      &--2 {
+        transform: rotate(0) translateY(0);
+        opacity: 0;
+      }
+      &--3 {
+        transform: rotate(-45deg) translateY(0);
+      }
+    }
+  }
+}

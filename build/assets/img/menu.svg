@@ -1,0 +1,5 @@
+<svg class="c-nav-button__svg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+	<path class="c-nav-button__path c-nav-button__path--1" d="M5 14h20v2h-20z"/>
+	<path class="c-nav-button__path c-nav-button__path--2"d="M5 14h20v2h-20z"/>
+	<path class="c-nav-button__path c-nav-button__path--3"d="M5 14h20v2h-20z"/>
+</svg>

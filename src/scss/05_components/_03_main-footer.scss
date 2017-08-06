@@ -1,0 +1,12 @@
+// Component
+// c-main-header
+
+/*----------------[Variables]----------------*/
+
+$c-main-footer__background-color: $s-color-grey-80;
+$c-main-footer__color: $s-color-light;
+/*----------------[Variables]----------------*/
+.c-main-footer {
+  background-color: $c-main-footer__background-color;
+  color: $c-main-footer__color;
+}
