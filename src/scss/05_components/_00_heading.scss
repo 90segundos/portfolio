@@ -5,5 +5,11 @@
 }
 .c-subheading {
   margin-top: 0;
-  font-size: $s-font-size-md;
+  font-size: $s-font-size-md;;
+  &--profile {
+    display: inline-block;
+    font-family: $s-font-monospace;
+    color: $s-color-primary-light;
+    font-weight: 400;
+  }
 }

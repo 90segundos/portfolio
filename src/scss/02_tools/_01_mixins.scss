@@ -8,10 +8,24 @@
 @mixin font-size($font-size: $s-font-size-sm, $line-height : ''){
 
   @if $line-height == '' {
-    $line-height: $font-size * 1.2    
+    $line-height: $font-size * 1.2
   }
 
   font-size: $font-size;
   line-height: $line-height;
 
+}
+
+
+// Animation
+@mixin keyframes($animationName) {
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@mixin animation($param) {
+    @each $key, $value in $param {
+      #{animation-}#{$key}:#{$value};
+    }
 }

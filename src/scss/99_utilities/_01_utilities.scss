@@ -9,7 +9,7 @@
 
 // Font family
 .u-font-family-monospace {
-  font-family: $s-font-monospace; 
+  font-family: $s-font-monospace;
 }
 
 // Font weight
@@ -31,6 +31,15 @@
   .u-color-grey-#{$key}{
     color: $value;
   }
+}
+
+.u-color-light {
+  color: $s-color-light;
+}
+
+
+.u-color-dark {
+  color: $s-color-dark;
 }
 
 // Background-color

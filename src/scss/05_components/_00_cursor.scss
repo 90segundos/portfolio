@@ -1,0 +1,33 @@
+// COMPONENT
+// c-cursor
+
+/*----------------[Variables]----------------*/
+
+$c-cursor__animation-duration: 1s;
+$c-cursor__animation-name: 'blink';
+$c-cursor__animation-iteration-count: infinite;
+$c-cursor__animation-timing-function: none;
+
+$c-cursor__animation-parameters: (
+  'name': $c-cursor__animation-name,
+  'duration': $c-cursor__animation-duration,
+  'iteration-count': $c-cursor__animation-iteration-count,
+  'timing-function': $c-cursor__animation-timing-function
+);
+
+$c-cursor__animation-keyframes: (
+  '0%':'opacity: 0;',
+  '50%':'opacity: 1;'
+);
+
+/*----------------[Variables]----------------*/
+
+@include keyframes($c-cursor__animation-name){
+  0%   {opacity: 0;}
+  49%  {opacity: 0;}
+  50%  {opacity: 1;}
+  100% {opacity: 1;}
+}
+.c-cursor {
+  @include animation ($c-cursor__animation-parameters);
+}

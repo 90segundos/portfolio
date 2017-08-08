@@ -55,4 +55,5 @@ function buttonNavInit(){
 $(document).ready(function(){
   console.log('ready');
   buttonNavInit();
+  activate('.t-animation');
 });

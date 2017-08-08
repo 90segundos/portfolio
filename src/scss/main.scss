@@ -6,6 +6,8 @@
 
 // Tools
 @import "02_tools/01_mixins";
+@import "02_tools/02_animation";
+
 
 // Element
 @import "03_elements/01_reset";
@@ -27,6 +29,7 @@
 @import "05_components/00_main-header";
 @import "05_components/00_main-footer";
 @import "05_components/00_profile-list";
+@import "05_components/00_cursor";
 @import "05_components/00_logo";
 
 // Utilities
