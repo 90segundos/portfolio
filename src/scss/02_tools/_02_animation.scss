@@ -3,16 +3,40 @@
 
 /*----------------[Variables]----------------*/
 
+// fade-in
+$t-animation--fade-in__start: (
+  'opacity':0,
+  'transform':translate(0,20px);
+);
+
+$t-animation--fade-in__end: (
+  'opacity':1,
+  'transform':translate(0,0)
+);
+
 $t-animation--fade-in__parameters:(
   'name':'fade-in',
-  'duration':300ms,
-  'timing-function': ease-out
+  'duration': 500ms,
+  'timing-function': ease-in-out,
+  'fill-mode': forwards
+);
+
+// typing
+$t-animation--typing__start: (
+  'width':0
+);
+
+$t-animation--typing__end: (
+  'width': 100%
 );
 
 $t-animation--typing__parameters:(
   'name':'typing',
   'duration':4s,
-  'timing-function': steps(66, end)
+  'timing-function': steps(66, end),
+  'delay': 500ms,
+  'fill-mode': forwards
+
 );
 
 $t-animation--cursor__parameters: (
@@ -23,17 +47,33 @@ $t-animation--cursor__parameters: (
 );
 
 // Animation keyframes
-@include keyframes('typing'){
-  0%    { width: 0; }
-  100%  { width: 100%; }
+@keyframes typing {
+  0%   {
+    @each $key, $value in $t-animation--typing__start {
+      #{$key} : #{$value};
+    }
+  }
+  100% {
+    @each $key, $value in $t-animation--typing__end {
+      #{$key} : #{$value};
+    }
+  }
 }
 
-@include keyframes('fade-in'){
-  from  { opacity: 0; }
-  to    { opacity: 1; }
+@keyframes fade-in {
+  0%   {
+    @each $key, $value in $t-animation--fade-in__start {
+      #{$key} : #{$value};
+    }
+  }
+  100% {
+    @each $key, $value in $t-animation--fade-in__end {
+      #{$key} : #{$value};
+    }
+  }
 }
 
-@include keyframes('cursor'){
+@keyframes cursor{
   0%   {opacity: 0;}
   49%  {opacity: 0;}
   50%  {opacity: 1;}
@@ -45,6 +85,9 @@ $t-animation--cursor__parameters: (
 // Animation properties
 .t-animation{
   &--typing {
+    @each $key, $value in $t-animation--typing__start {
+      #{$key} : #{$value};
+    }
     overflow: hidden;
     white-space: nowrap;
     letter-spacing: 0;
@@ -62,6 +105,9 @@ $t-animation--cursor__parameters: (
     }
   }
   &--fade-in {
+    @each $key, $value in $t-animation--fade-in__start {
+      #{$key} : #{$value};
+    }
     &.is-active {
       @include animation($t-animation--fade-in__parameters);
     }

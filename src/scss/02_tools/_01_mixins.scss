@@ -16,14 +16,7 @@
 
 }
 
-
 // Animation
-@mixin keyframes($animationName) {
-    @keyframes #{$animationName} {
-        @content;
-    }
-}
-
 @mixin animation($param) {
     @each $key, $value in $param {
       #{animation-}#{$key}:#{$value};
