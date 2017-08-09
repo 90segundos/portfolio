@@ -13,14 +13,16 @@ $c-nav__link-color: $s-color-primary-light;
 }
 
 .c-nav__list {
-
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  height: $s-font-size-sm;
 }
 
 .c-nav__item {
   display: inline;
-  font-size: 0;
-  letter-spacing: 0;
-  margin-right: $s-spacing-unit/2;
+  @include font-size($s-font-size-sm);
+  margin-right: round($s-spacing-unit/2);
   color: $c-nav__link-color;
 
   &:last-child{
@@ -28,5 +30,4 @@ $c-nav__link-color: $s-color-primary-light;
   }
 }
 .c-nav__link {
-  font-size: $s-font-size-sm;
 }

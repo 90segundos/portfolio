@@ -15,9 +15,11 @@ var gulp = require('gulp'),
 /* ---------------------[ directories ]----------------------- */
 
 var directories = {
-  'pug_src':    ['src/pug/**/*.pug'],
+  'pug_watch':  ['src/pug/**/*.pug'],
+  'pug_src':    ['src/pug/*.pug'],
   'pug_build':  'build',
-  'sass_src':   ['src/scss/**/*.scss'],
+  'sass_watch': ['src/scss/**/*.scss'],
+  'sass_src':   ['src/scss/*.scss'],
   'sass_build': 'build/assets/css',
   'js_src':     ['src/js/**/*.js'],
   'js_build':   'build/assets/js',
@@ -65,8 +67,8 @@ gulp.task('scripts', function() {
 
 // watch
 gulp.task('watch', function () {
-  gulp.watch(directories.pug_src, ['compile_pug']);
-  gulp.watch(directories.sass_src, ['compile_sass']);
+  gulp.watch(directories.pug_watch, ['compile_pug']);
+  gulp.watch(directories.sass_watch, ['compile_sass']);
   //gulp.watch(directories.img_src, ['img_minify']);
   gulp.watch(directories.js_src, ['scripts']);
 });
