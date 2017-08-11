@@ -3,42 +3,21 @@
 
 /*----------------[Variables]----------------*/
 
-// fade-in
-$t-animation--fade-in__start: (
-  'opacity':0,
-  'transform':translate(0,20px)
-);
-
-$t-animation--fade-in__end: (
-  'opacity':1,
-  'transform':translate(0,0)
-);
-
-$t-animation--fade-in__parameters:(
-  'name':'fade-in',
-  'duration': 500ms,
-  'timing-function': ease-in-out,
-  'fill-mode': forwards
-);
+$t-transition-duration: 500ms;
+$t-transition-timing-function: ease;
+$t-transition: all $t-transition-duration $t-transition-timing-function;
 
 // typing
-$t-animation--typing__start: (
-  'width':0
-);
-
-$t-animation--typing__end: (
-  'width': 100%
-);
-
 $t-animation--typing__parameters:(
   'name':'typing',
   'duration':4s,
-  'timing-function': steps(66, end),
+  'timing-function': steps(68, end),
   'delay': 500ms,
   'fill-mode': forwards
 
 );
 
+// cursor
 $t-animation--cursor__parameters: (
 'name': 'cursor',
 'duration': 1s,
@@ -48,29 +27,8 @@ $t-animation--cursor__parameters: (
 
 // Animation keyframes
 @keyframes typing {
-  0%   {
-    @each $key, $value in $t-animation--typing__start {
-      #{$key} : #{$value};
-    }
-  }
-  100% {
-    @each $key, $value in $t-animation--typing__end {
-      #{$key} : #{$value};
-    }
-  }
-}
-
-@keyframes fade-in {
-  0%   {
-    @each $key, $value in $t-animation--fade-in__start {
-      #{$key} : #{$value};
-    }
-  }
-  100% {
-    @each $key, $value in $t-animation--fade-in__end {
-      #{$key} : #{$value};
-    }
-  }
+  0%  { width: 0; }
+  100% { width: 100%; }
 }
 
 @keyframes cursor{
@@ -84,10 +42,9 @@ $t-animation--cursor__parameters: (
 
 // Animation properties
 .t-animation{
+
   &--typing {
-    @each $key, $value in $t-animation--typing__start {
-      #{$key} : #{$value};
-    }
+    width: 0;
     overflow: hidden;
     white-space: nowrap;
     letter-spacing: 0;
@@ -104,17 +61,23 @@ $t-animation--cursor__parameters: (
       }
     }
   }
-  &--fade-in {
-    @each $key, $value in $t-animation--fade-in__start {
-      #{$key} : #{$value};
-    }
-    &.is-active {
-      @include animation($t-animation--fade-in__parameters);
-    }
-  }
+
   &--cursor {
     &.is-active{
       @include animation($t-animation--cursor__parameters);
     }
+  }
+}
+
+.fade-in-left {
+  transition: $t-transition;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(20px,0);
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0,0);
   }
 }

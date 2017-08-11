@@ -3,31 +3,109 @@
 
 /*----------------[ Variables ]----------------*/
 
-$c-nav__link-color: $s-color-primary-light;
+$c-nav__link-color: $s-color-grey-80;
+$c-nav__item-background-color: $s-color-grey-20;
+$c-nav__item-background-color--hover: $s-color-grey-20;
+
+$c-nav__border-width: 2px;
+
+// transition
+$c-nav-transition__duration: 250ms;
+$c-nav-transition__timing-function: ease;
+$c-nav-transition__property: all;
+$c-nav-transition:
+  $c-nav-transition__property
+  $c-nav-transition__duration
+  $c-nav-transition__timing-function;
 
 
 /*----------------[ Style ]----------------*/
 
 .c-nav {
-
+  transition-delay: 500ms;
 }
 
 .c-nav__list {
   font-size: 0;
   margin: 0;
   padding: 0;
-  height: $s-font-size-sm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .c-nav__item {
-  display: inline;
+  transition: $c-nav-transition;
   @include font-size($s-font-size-sm);
-  margin-right: round($s-spacing-unit/2);
   color: $c-nav__link-color;
+  position: relative;
+  border-top: $c-nav__border-width solid transparent;
+  border-bottom: $c-nav__border-width solid transparent;
 
-  &:last-child{
-    margin-right: 0;
+  &:hover {
+
+    border-bottom-color: $c-nav__link-color;
+
+    .c-nav__item-decoration {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+}
+
+.c-nav__item-decoration {
+  opacity: 0;
+  visibility: hidden;
+  transition: $c-nav-transition;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+
+  &--before {
+    transform: scaleX(-1);
+    left: -10px;
+  }
+
+  &--after {
+    right: -10px;
   }
 }
+
+.c-nav__item-decoration--before{
+  transition: $c-nav-transition;
+  position: absolute;
+  bottom: 0;
+  transform: scaleX(-1);
+  left: -10px;
+  z-index: 1;
+}
+.c-nav__item-decoration--after {
+  transition: $c-nav-transition;
+  position: absolute;
+  bottom: 0;
+  right: -10px;
+  z-index: 1;
+}
+
 .c-nav__link {
+  transition: $c-nav-transition;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $c-nav__item-background-color;
+
+  &:hover {
+    background-color: $c-nav__item-background-color--hover;
+  }
+
+  @each $key, $value in $s-header-heights {
+    @media (min-width: map-get($s-breakpoints,$key)){
+      height: map-get($s-header-heights, $key) - (2 * $c-nav__border-width);
+    }
+  }
+
+  @media (min-width: $s-breakpoint-sm){
+    padding: 0 $s-spacing-unit * 1.5;
+  }
 }

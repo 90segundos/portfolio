@@ -62,7 +62,8 @@ gulp.task('img_minify', function () {
 gulp.task('scripts', function() {
   return gulp.src(directories.js_src)
     .pipe(concat('main.js'))
-    .pipe(gulp.dest(directories.js_build));
+    .pipe(gulp.dest(directories.js_build))
+    .pipe(notify("Scripts concatenated"));
 });
 
 // watch

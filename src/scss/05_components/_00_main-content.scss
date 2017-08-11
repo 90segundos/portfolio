@@ -3,9 +3,9 @@
 
 /*----------------[Variables]----------------*/
 
-$c-main-content__background-color: lighten($s-color-dark,10);
+$c-main-content__background-color: transparent;
 
 /*----------------[Variables]----------------*/
 .c-main-content {
-  //background-color: $c-main-content__background-color;
+  background-color: $c-main-content__background-color;
 }

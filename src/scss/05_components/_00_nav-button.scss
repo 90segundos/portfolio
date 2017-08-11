@@ -1,11 +1,17 @@
 // Component
 // c-nav-button
 
+/*----------------[ Variables ]----------------*/
+
+$c-nav-button__color:  $s-color-grey-80;
+
+/*----------------[ Style ]----------------*/
+
 .c-nav-button__path {
   transition: all 400ms ease;
   transition-delay: 400ms;
   transform-origin: center center;
-  fill: $s-color-primary-light;
+  fill: $c-nav-button__color;
   &--1 {
     transform: rotate(0) translateY(-7px);
   }

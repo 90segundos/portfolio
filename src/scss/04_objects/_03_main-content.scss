@@ -3,18 +3,14 @@
 
 /*----------------[Variables]----------------*/
 
-$o-main-content__breakpoints: (
-  'sm': 20px 0,
-  'md': 20px 0,
-  'lg': 40px 0
-);
+
 
 /*----------------[Variables]----------------*/
 
 .o-main-content {
-  @each $key, $value in $o-main-content__breakpoints {
-    @media (min-width: map-get($s-breakpoints, #{$key})){
-      padding: map-get($o-main-content__breakpoints, #{$key});
-    }
-  }
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: $s-color-grey-90;
 }

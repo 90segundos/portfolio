@@ -1,0 +1,13 @@
+// Component
+// c-main-title
+
+/*----------------[ Variables ]----------------*/
+
+$c-main-title__font-size: map-get($s-font-sizes,'xl');
+
+/*----------------[ Estilos ]----------------*/
+
+.c-main-title {
+  @include font-size($c-main-title__font-size);
+  font-weight: 500;
+}

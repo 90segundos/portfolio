@@ -8,37 +8,38 @@ html(lang='es')
     link(rel="stylesheet", href="assets/css/normalize.css")
     link(rel="stylesheet", href="assets/css/main.css")
   body(class="is-reversed")
-    div(class="o-container o-container--fluid c-main-container")
-      
-      // main header
-      include _partials/header.pug
-      
-      div(class="o-main-content o-container c-main-content")
-        
-        div(class="o-row")
-          
-          div(class="o-col")
-          
-            section(class="o-section o-row")
-              
-              div(class="o-col")
-                
-                header(class="o-section is-animatable")
-                  h1(class="c-heading t-animation t-animation--fade-in")
-                    span(class="u-font-size-2xl") Alejandro Sotoca Pinilla
-                  h2(class="c-subheading c-subheading--profile")
-                    span(class="t-animation t-animation--typing") {'Desarrollador front-end', 'Diseñador gráfico', 'Diseñador web'}
-                
-                // /header
-                
-                article(class="o-section")
-                  p(class="is-animatable").
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                // /article
-                
-      // main footer
-      include _partials/footer.pug
     
+    div(class="o-container o-container--fluid o-container--full-height c-main-container")
+      
+      div(class="c-main-content o-container")
+        div(class="o-row o-row--vertical-bottom")
+          div(class="o-col o-col-3") 
+            h1(class="c-heading") Alejandro <br>Sotoca Pinilla
+          
+          div(class="o-col o-col-9")
+            ul(class="o-row c-profile-list")
+              li(class="o-col o-col-4 c-profile-list__item" data-item="1") 
+                span(class="c-profile-list__number") 01
+                a(class="c-profile__link" href="#") 
+                  h2(class="c-subheading") Desarrollador <br>front-end
+          
+              li(class="o-col o-col-4 c-profile-list__item" data-item="2") 
+                span(class="c-profile-list__number") 02
+                a(class="c-profile__link" href="#") 
+                  h2(class="c-subheading") Diseñador <br>gráfico
+              
+              li(class="o-col o-col-4 c-profile-list__item" data-item="3") 
+                span(class="c-profile-list__number") 03
+                a(class="c-profile__link" href="#") 
+                  h2(class="c-subheading") Diseñador <br>web
+            // /.u-profile-list
+        // /.o-row
+          
+        div(class="o-row")
+          div(class="o-col c-profile-marker")
+            span(class="c-profile-marker__mark") 
+        // /.o-row
+        
     // javascript
     script(type="text/javascript" src="assets/js/main.js")
     script(type="text/javascript").

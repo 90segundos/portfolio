@@ -16,10 +16,10 @@ $s-breakpoints: (
 );
 
 // Variables
-$s-spacing-unit: 15px;
+$s-spacing-unit: 16px;
 
 // Color
-$s-color-dark: #202226;
+$s-color-dark: #282828;
 $s-color-light: #ffffff;
 
 $s-color-grey-02: lighten($s-color-dark, 98);
@@ -52,7 +52,7 @@ $s-color-greyscale: (
   '90': $s-color-grey-90
 );
 
-$s-color-primary: #009d77;
+$s-color-primary: #38a4f3;
 $s-color-primary-light: lighten($s-color-primary, 10%);
 $s-color-primary-dark: desaturate(darken($s-color-primary,10%), 10);
 
@@ -78,10 +78,10 @@ $s-brand-colors: (
 
 // Fonts
 $s-font-size-xs: 10px;
-$s-font-size-sm: 16px;
+$s-font-size-sm: 14px;
 $s-font-size-md: 18px;
-$s-font-size-lg: 22px;
-$s-font-size-xl: 30px;
+$s-font-size-lg: 24px;
+$s-font-size-xl: 36px;
 $s-font-size-2xl: 60px;
 
 $s-font-sizes: (

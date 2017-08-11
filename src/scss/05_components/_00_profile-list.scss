@@ -9,36 +9,13 @@ $c-profile-list__link-color: $s-color-primary-light;
 /*----------------[ Style ]----------------*/
 
 .c-profile-list {
-  display: inline-block;
-  padding: 0 $s-spacing-unit;
-  font-family: $s-font-monospace;
-  font-size: 0;
-  color: $c-nav__link-color;
-  font-weight: 400;
-
-  &:before {
-    font-size: $s-font-size-md;
-    content: '{\'';
-    margin: 0;
-  }
-  &:after {
-    font-size: $s-font-size-md;
-    content: '\'}';
-    margin: 0;
-  }
+  font-weight: 500;
 }
-
 .c-profile-list__item {
-  font-size: $s-font-size-md;
-  display: inline-block;
-  margin: 0;
 
-  &:not(:first-child):before {
-    content: '\', \'';
-    display: inline;
-    margin: 0;
-  }
 }
-.c-nav__link {
-  @include font-size($s-font-size-sm);
+.c-profile-list__number {
+  display: block;
+  color: $s-color-grey-70;
+  padding-bottom: $s-spacing-unit / 2;
 }

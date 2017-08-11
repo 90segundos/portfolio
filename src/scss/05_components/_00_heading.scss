@@ -1,15 +1,9 @@
 // COMPONENT:  C-HEADING
 
 .c-heading {
-  @include font-size(map-get($s-font-sizes,'xl'), map-get($s-font-sizes,'xl'));
+  @include font-size(map-get($s-font-sizes,'xl'));
 }
 .c-subheading {
   margin-top: 0;
-  font-size: $s-font-size-md;;
-  &--profile {
-    display: inline-block;
-    font-family: $s-font-monospace;
-    color: $s-color-primary-light;
-    font-weight: 400;
-  }
+  @include font-size(map-get($s-font-sizes,'lg'));
 }

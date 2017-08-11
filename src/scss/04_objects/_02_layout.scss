@@ -14,7 +14,9 @@ $o-layout__breakpoints: (
 /*----------------[Variables]----------------*/
 
 .o-container {
-  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
   width: 100%;
   margin: auto;
   padding-left: $o-layout__padding;
@@ -27,27 +29,33 @@ $o-layout__breakpoints: (
   }
 
   &--fluid {
-    max-width: 100%;
+    max-width: unset;
   }
+
+  &--full-height {
+    min-height: 100%;
+  }
+
 }
 
 .o-row {
+  width: 100%;
   position: relative;
   margin-left: - $o-layout__padding;
   margin-right: - $o-layout__padding;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: flex-start;
-  align-content: flex-start;
+  flex: 1 0 auto;
 
   &--vertical-flow {
-    flex-direction: row;
+    flex-direction: column;
   }
   &--vertical-center {
     align-items: center;
     align-content: center;
+  }
+  &--vertical-bottom {
+    align-items: flex-end;
+    align-content: flex-end;
   }
   &--align-center {
     justify-content: center;
@@ -58,10 +66,14 @@ $o-layout__breakpoints: (
   &--column-reverse {
     flex-flow: column-reverse;
   }
+  &--stretch {
+    align-items: stretch;
+  }
 }
 
 .o-col {
   max-width: 100%;
+  flex: 1 1 auto;
   padding-left: $o-layout__padding;
   padding-right: $o-layout__padding;
   @for $i from 1 through $o-layout__columns {
@@ -69,6 +81,11 @@ $o-layout__breakpoints: (
       order: $i;
     }
   }
+
+  &--stretch {
+    align-self: stretch;
+  }
+
 }
 
 @for $i from 1 through $o-layout__columns {
