@@ -11,6 +11,8 @@ html(lang='es')
     
     div(class="o-container o-container--fluid o-container--full-height c-main-container")
       
+      include _partials/header.pug
+      
       div(class="c-main-content o-container")
         div(class="o-row o-row--vertical-bottom")
           div(class="o-col o-col-3") 
@@ -19,16 +21,19 @@ html(lang='es')
           div(class="o-col o-col-9")
             ul(class="o-row c-profile-list")
               li(class="o-col o-col-4 c-profile-list__item" data-item="1") 
+                
                 span(class="c-profile-list__number") 01
                 a(class="c-profile__link" href="#") 
                   h2(class="c-subheading") Desarrollador <br>front-end
           
-              li(class="o-col o-col-4 c-profile-list__item" data-item="2") 
+              li(class="o-col o-col-4 c-profile-list__item" data-item="2")
+                
                 span(class="c-profile-list__number") 02
                 a(class="c-profile__link" href="#") 
                   h2(class="c-subheading") Diseñador <br>gráfico
               
               li(class="o-col o-col-4 c-profile-list__item" data-item="3") 
+                
                 span(class="c-profile-list__number") 03
                 a(class="c-profile__link" href="#") 
                   h2(class="c-subheading") Diseñador <br>web
@@ -36,8 +41,9 @@ html(lang='es')
         // /.o-row
           
         div(class="o-row")
-          div(class="o-col c-profile-marker")
-            span(class="c-profile-marker__mark") 
+          div(class="o-col")
+            div(class="c-profile-marker")
+              span(class="c-profile-marker__mark") 
         // /.o-row
         
     // javascript

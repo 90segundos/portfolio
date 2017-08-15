@@ -8,10 +8,4 @@ $c-main-header__background-color: transparent;
 /*----------------[Variables]----------------*/
 .c-main-header {
   background-color: $c-main-header__background-color;
-
-  @each $key, $value in $s-header-heights {
-    @media (min-width: map-get($s-breakpoints,$key)){
-      height: map-get($s-header-heights, $key);
-    }
-  }
 }

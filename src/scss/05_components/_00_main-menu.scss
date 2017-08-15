@@ -11,6 +11,7 @@ $c-main-menu__background-color: transparent;
   justify-content: flex-end;
   align-items: center;
   background-color: $c-main-menu__background-color;
+  flex: 0 0 auto;
 }
 
 .c-main-menu__list {

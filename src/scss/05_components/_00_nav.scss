@@ -3,11 +3,11 @@
 
 /*----------------[ Variables ]----------------*/
 
-$c-nav__link-color: $s-color-grey-80;
-$c-nav__item-background-color: $s-color-grey-20;
-$c-nav__item-background-color--hover: $s-color-grey-20;
+$c-nav__link-color: rgba($s-color-light, .3);
+$c-nav__item-background-color: transparent;
+$c-nav__item-background-color--hover: transparent;
 
-$c-nav__border-width: 2px;
+$c-nav__border-width: 1px;
 
 // transition
 $c-nav-transition__duration: 250ms;

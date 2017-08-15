@@ -1,19 +1,24 @@
 // COMPONENT
 // c-profile-marker
 
+/*--------------[ variables ]---------------*/
+
+$c-profile-marker__color: rgba($s-color-light,.3);
+
 .c-profile-marker {
   padding: $s-spacing-unit 0 0;
-  margin: 0 $s-spacing-unit;
-  border-bottom: 1px solid $s-color-grey-70;
+  margin: 0 (-$s-spacing-unit) 0;
+  border-bottom: 1px solid $c-profile-marker__color;
 }
 
 .c-profile-marker__mark {
   display: block;
   position: relative;
-  background-color: $s-color-grey-70;
+  background-color: $c-profile-marker__color;
   height: 4px;
   width: 120px;
   max-width: 20%;
+  margin-left: $s-spacing-unit;
   left: 0;
   transition: all 500ms ease;
   transition-delay: 250ms;

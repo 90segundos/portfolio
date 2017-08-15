@@ -13,6 +13,12 @@ $o-layout__breakpoints: (
 
 /*----------------[Variables]----------------*/
 
+// debug
+/*
+.o-row { @extend .u-outline; }
+.o-col { @extend .u-outline, .u-outline--green; }
+*/
+
 .o-container {
   display: flex;
   flex: 1 1 auto;
@@ -39,12 +45,11 @@ $o-layout__breakpoints: (
 }
 
 .o-row {
-  width: 100%;
   position: relative;
   margin-left: - $o-layout__padding;
   margin-right: - $o-layout__padding;
   display: flex;
-  flex: 1 0 auto;
+  flex: 1 1 100%;
 
   &--vertical-flow {
     flex-direction: column;

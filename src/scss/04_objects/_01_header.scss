@@ -2,5 +2,14 @@
 // o-header
 
 .o-header {
-  //padding: $s-spacing-unit 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  @each $key, $value in $s-header-heights {
+    @media (min-width: map-get($s-breakpoints,$key)){
+      height: map-get($s-header-heights, $key);
+    }
+  }
 }

@@ -3,7 +3,7 @@
 
 /*----------------[ Variables ]----------------*/
 
-$c-nav-button__color:  $s-color-grey-80;
+$c-nav-button__color:  $s-color-grey-70;
 
 /*----------------[ Style ]----------------*/
 
@@ -26,7 +26,7 @@ $c-nav-button__color:  $s-color-grey-80;
 .c-nav-button {
   transition: transform 400ms ease;
   &.is-active {
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
     & .c-nav-button__path {
       &--1 {
         transform: rotate(45deg) translateY(0);
@@ -39,4 +39,8 @@ $c-nav-button__color:  $s-color-grey-80;
       }
     }
   }
+}
+
+.c-nav-button__svg {
+  flex: 1 0 auto;
 }
