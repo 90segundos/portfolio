@@ -6,9 +6,9 @@
 $c-profile-marker__color: rgba($s-color-light,.3);
 
 .c-profile-marker {
-  padding: $s-spacing-unit 0 0;
+  position: relative;
+  padding: $s-spacing-unit 0;
   margin: 0 (-$s-spacing-unit) 0;
-  border-bottom: 1px solid $c-profile-marker__color;
 }
 
 .c-profile-marker__mark {
@@ -22,4 +22,11 @@ $c-profile-marker__color: rgba($s-color-light,.3);
   left: 0;
   transition: all 500ms ease;
   transition-delay: 250ms;
+}
+
+.c-profile-marker__line {
+  height: 1px;
+  width: 100%;
+  margin: 0 $s-spacing-unit;
+  background-color: $c-profile-marker__color;
 }
