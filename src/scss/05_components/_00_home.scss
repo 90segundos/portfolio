@@ -15,5 +15,4 @@ $c-home-menu__transition: $c-home-menu__transition-property $c-home-menu__transi
 .c-home-menu {
   @include absoluteCenter();
   transition: $c-home-menu__transition;
-
 }

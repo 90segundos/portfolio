@@ -7,46 +7,46 @@ html(lang='es')
     title Portfolio
     link(rel="stylesheet", href="assets/css/normalize.css")
     link(rel="stylesheet", href="assets/css/main.css")
-  body(class="is-reversed")
+  body(class="is-reversed c-body")
     
-    div(class="o-container o-container--fluid o-container--full-height c-main-container")
+    // Main container
+    div(class="container c-main-container")
       
-      include _partials/header.pug
-      
-      div(class="c-main-content o-container")
-        div(class="o-row o-row--vertical-bottom")
-          div(class="o-col o-col-3") 
-            h1(class="c-heading") Alejandro <br>Sotoca Pinilla
-          
-          div(class="o-col o-col-9")
-            ul(class="o-row c-profile-list")
-              li(class="o-col o-col-4 c-profile-list__item" data-item="1") 
-                
-                span(class="c-profile-list__number") 01
-                a(class="c-profile__link" href="#") 
-                  h2(class="c-subheading") Desarrollador <br>front-end
-          
-              li(class="o-col o-col-4 c-profile-list__item" data-item="2")
-                
-                span(class="c-profile-list__number") 02
-                a(class="c-profile__link" href="#") 
-                  h2(class="c-subheading") Diseñador <br>gráfico
-              
-              li(class="o-col o-col-4 c-profile-list__item" data-item="3") 
-                
-                span(class="c-profile-list__number") 03
-                a(class="c-profile__link" href="#") 
-                  h2(class="c-subheading") Diseñador <br>web
-            // /.u-profile-list
-        // /.o-row
-          
-        div(class="o-row")
-          div(class="o-col")
-            div(class="c-profile-marker")
-              span(class="c-profile-marker__mark") 
-              div(class="c-profile-marker__line")
-        // /.o-row
+      div(class="row c-main-content")
         
+        div(class="col")
+          
+          div(class="row align-items-end")
+            
+            div(class="col-sm-3 col-xs-12")
+              h1(class="c-heading") Alejandro <br>Sotoca Pinilla
+            // /.c-main-title
+            
+            nav(class="col-sm-9 col-xs-12 c-home-nav")
+            
+              ul(class="row c-home-nav__list align-items-end")
+                
+                li(class="col-4 c-home-nav__item")
+                  span(class="c-home-nav__number" aria-hidden="true") 1
+                  a(class="c-home-nav__link").
+                    Desarrollador <br>front - end
+                  
+                li(class="col-4 c-home-nav__item")
+                  span(class="c-home-nav__number" aria-hidden="true") 2
+                  a(class="c-home-nav__link").
+                    Diseñador <br>gráfico
+                  
+                li(class="col-4 c-home-nav__item")
+                  span(class="c-home-nav__number" aria-hidden="true") 3
+                  a(class="c-home-nav__link").
+                    Diseñador <br>web
+        
+        // /.col
+        
+      // /.row .c-main-content
+      
+    // /.c-main-container /.container
+          
     // javascript
     script(type="text/javascript" src="assets/js/main.js")
     script(type="text/javascript").

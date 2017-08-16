@@ -1,9 +1,10 @@
-// COMPONENT:  C-HEADING
+// COMPONENT
+// c-heading
 
 .c-heading {
-  @include font-size(map-get($s-font-sizes,'xl'));
+  @include font-size( map-get($s-font-sizes,'xl') );
 }
 .c-subheading {
   margin-top: 0;
-  @include font-size(map-get($s-font-sizes,'lg'));
+  @include font-size( map-get($s-font-sizes,'lg') );
 }

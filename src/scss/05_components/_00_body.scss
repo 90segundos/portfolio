@@ -1,0 +1,15 @@
+// Component
+// c-body
+
+/*----------------[Variables]----------------*/
+
+$c-body__background-color: $s-color-dark;
+
+/*----------------[Variables]----------------*/
+
+.c-body {
+  background-color: $c-body__background-color;
+  //background-image: url('../img/landscape-1.jpg');
+  background-size: cover;
+  background-position: center center;
+}

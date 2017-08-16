@@ -6,66 +6,36 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/main.css">
   </head>
-  <body class="is-reversed">
-    <div class="o-container o-container--fluid o-container--full-height c-main-container">
-      <header class="o-header c-main-header o-container o-container--fluid">
-        <div class="o-row o-row--row-reverse o-row--vertical-center">
-          <div class="c-main-menu o-col">
-            <div class="o-row o-row--vertical-center">
-              <nav class="c-nav fade-in-left o-col">
-                <ul class="c-nav__list">
-                  <li class="c-nav__item"><a class="c-nav__link" href="#" title="">link</a></li>
-                  <li class="c-nav__item"><a class="c-nav__link" href="#" title="">link</a></li>
-                  <li class="c-nav__item"><a class="c-nav__link" href="#" title="">link</a></li>
-                  <li class="c-nav__item"><a class="c-nav__link" href="#" title="">link</a></li>
-                </ul>
-              </nav>
-              <!-- /.c-nav-->
-              <button class="c-nav-button o-col">
-                <div class="o-row o-row--vertical-center"><svg class="o-col c-nav-button__svg" xmlns="http://www.w3.org/2000/svg" width="60" height="30" viewBox="0 0 30 30">
-<path class="c-nav-button__path c-nav-button__path--1" d="M5 14h20v2h-20z"/>
-<path class="c-nav-button__path c-nav-button__path--2"d="M5 14h20v2h-20z"/>
-<path class="c-nav-button__path c-nav-button__path--3"d="M5 14h20v2h-20z"/>
-</svg>
-                </div>
-              </button>
-              <!-- /.c-nav-button-->
+  <body class="is-reversed c-body">
+    <!-- Main container-->
+    <div class="container c-main-container">
+      <div class="row c-main-content">
+        <div class="col">
+          <div class="row align-items-end">
+            <div class="col-sm-3 col-xs-12">
+              <h1 class="c-heading">Alejandro <br>Sotoca Pinilla</h1>
             </div>
-            <!-- .o-row    -->
-          </div>
-          <!-- /.c-main-menu /.o-col-->
-        </div>
-        <!-- /.o-row-->
-      </header>
-      <!-- /.o-header-->
-      <div class="c-main-content o-container">
-        <div class="o-row o-row--vertical-bottom">
-          <div class="o-col o-col-3"> 
-            <h1 class="c-heading">Alejandro <br>Sotoca Pinilla</h1>
-          </div>
-          <div class="o-col o-col-9">
-            <ul class="o-row c-profile-list">
-              <li class="o-col o-col-4 c-profile-list__item" data-item="1"> <span class="c-profile-list__number">01</span><a class="c-profile__link" href="#"> 
-                  <h2 class="c-subheading">Desarrollador <br>front-end</h2></a></li>
-              <li class="o-col o-col-4 c-profile-list__item" data-item="2"><span class="c-profile-list__number">02</span><a class="c-profile__link" href="#"> 
-                  <h2 class="c-subheading">Diseñador <br>gráfico</h2></a></li>
-              <li class="o-col o-col-4 c-profile-list__item" data-item="3"> <span class="c-profile-list__number">03</span><a class="c-profile__link" href="#"> 
-                  <h2 class="c-subheading">Diseñador <br>web</h2></a></li>
-            </ul>
-            <!-- /.u-profile-list-->
+            <!-- /.c-main-title-->
+            <nav class="col-sm-9 col-xs-12 c-home-nav">
+              <ul class="row c-home-nav__list align-items-end">
+                <li class="col-4 c-home-nav__item"><span class="c-home-nav__number" aria-hidden="true">1</span><a class="c-home-nav__link">
+                    Desarrollador <br>front - end
+                    </a></li>
+                <li class="col-4 c-home-nav__item"><span class="c-home-nav__number" aria-hidden="true">2</span><a class="c-home-nav__link">
+                    Diseñador <br>gráfico
+                    </a></li>
+                <li class="col-4 c-home-nav__item"><span class="c-home-nav__number" aria-hidden="true">3</span><a class="c-home-nav__link">
+                    Diseñador <br>web
+                    </a></li>
+              </ul>
+            </nav>
           </div>
         </div>
-        <!-- /.o-row-->
-        <div class="o-row">
-          <div class="o-col">
-            <div class="c-profile-marker"><span class="c-profile-marker__mark"> </span>
-              <div class="c-profile-marker__line"></div>
-            </div>
-          </div>
-        </div>
-        <!-- /.o-row-->
+        <!-- /.col-->
       </div>
+      <!-- /.row .c-main-content-->
     </div>
+    <!-- /.c-main-container /.container-->
     <!-- javascript-->
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script type="text/javascript">activate('.is-animatable,anim');</script>
