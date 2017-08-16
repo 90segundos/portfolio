@@ -1,0 +1,19 @@
+// Home page components
+
+/* ----------------[ variables ]----------------*/
+
+// Transition
+$c-home-menu__transition-property: transform;
+$c-home-menu__transition__timing-function: ease;
+$c-home-menu__transition-duration: 500ms;
+$c-home-menu__transition: $c-home-menu__transition-property $c-home-menu__transition-duration $c-home-menu__transition__timing-function;
+
+
+/* ----------------[ style ]----------------*/
+
+
+.c-home-menu {
+  @include absoluteCenter();
+  transition: $c-home-menu__transition;
+
+}
