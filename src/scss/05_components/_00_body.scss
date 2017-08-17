@@ -3,7 +3,8 @@
 
 /*----------------[Variables]----------------*/
 
-$c-body__background-color: $s-color-dark;
+$c-body__background-color: $s-background-color;
+$c-body__background-color--reversed: $s-background-color--reversed;
 
 /*----------------[Variables]----------------*/
 
@@ -12,4 +13,9 @@ $c-body__background-color: $s-color-dark;
   //background-image: url('../img/landscape-1.jpg');
   background-size: cover;
   background-position: center center;
+
+  &.reversed {
+    background-color: $c-body__background-color;
+  }
+
 }

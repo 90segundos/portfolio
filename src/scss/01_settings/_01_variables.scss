@@ -76,9 +76,12 @@ $s-brand-colors: (
   'tertiary-dark' : $s-color-tertiary-dark
 );
 
+$s-background-color: $s-color-light;
+$s-background-color--reversed: $s-color-dark;
+
 // Fonts
 $s-font-size-xs: 10px;
-$s-font-size-sm: 14px;
+$s-font-size-sm: 16px;
 $s-font-size-md: 18px;
 $s-font-size-lg: 24px;
 $s-font-size-xl: 32px;

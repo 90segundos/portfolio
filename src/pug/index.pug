@@ -7,16 +7,17 @@ html(lang='es')
     title Portfolio
     link(rel="stylesheet", href="assets/css/normalize.css")
     link(rel="stylesheet", href="assets/css/main.css")
-  body(class="is-reversed c-body c-home")
+  body(class="c-body")
     
     // Main container
     div(class="container o-main-container")
       
-      div(class="row o-main-content")
+      // Home menu
+      section(class="o-row o-section")
         
-        div(class="col")
-          
-          div(class="row align-items-end c-home-center-row")
+        div(class="o-col-12")
+      
+          div(class="row align-items-end")
             
             div(class="col-sm-3 col-xs-12")
               a(href="/" title="home")
@@ -43,26 +44,28 @@ html(lang='es')
                   a(class="c-home-nav__link" href="#").
                     Diseñador <br>web
                     
-              // /.c-home-nav__list
+              // /ul .row .c-home-nav__list
         
-            // /.c-home-nav
+            // /nav .col .c-home-nav
           
           // /.row
-          
+        
           div(class="row")
-            div(class="col-12 c-home__underline")
-              div(class="c-home__underline-mark") 
+            div(class="col-12 c-home-underline")
+              div(class="c-home-underline-mark") 
                 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="4" viewBox="0 0 100 4"><path d="M0 0v5h100l-5-5z"/></svg>
-              div(class="c-home__underline-line")
+              div(class="c-home-underline-line")
             // /.c-home-underline
             
           // /.o-row
-          
-        // /.col
-        
-      // /.row .c-main-content
       
-    // /.c-main-container /.container
+      // section Home menu
+      
+      section(class="row o-section")
+        div(class="col-12").
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      
+    // /.o-main-container
           
     // javascript
     script(type="text/javascript" src="assets/js/main.js")

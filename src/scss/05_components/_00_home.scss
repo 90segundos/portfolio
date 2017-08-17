@@ -9,9 +9,9 @@ $c-home__transition: all 800ms ease;
 $c-home-nav__number-color: rgba($s-color-light, .3);
 $c-home-nav__number-color--hover: rgba($s-color-light, 1);
 
-$c-home__underline-transition: left 500ms ease;
-$c-home__underline-transition-delay: 250ms;
-$c-home__underline-color: rgba($s-color-light, .3);
+$c-home-underline__transition: left 500ms ease;
+$c-home-underline__transition-delay: 250ms;
+$c-home-underline__color: $s-color-primary;
 
 $c-home-nav__number-transition-in: color 125ms ease-in;
 $c-home-nav__number-transition-out: color 125ms ease-out;
@@ -76,13 +76,13 @@ $c-home-nav__number-transition-delay-out: 250ms;
 }
 
 // Underline
-.c-home__underline {
+.c-home-underline {
   padding: $s-spacing-unit 0 0;
 }
 
-.c-home__underline-mark {
-  transition: $c-home__underline-transition;
-  transition-delay: $c-home__underline-transition-delay;
+.c-home-underline-mark {
+  transition: $c-home-underline__transition;
+  transition-delay: $c-home-underline__transition-delay;
   position: relative;
   max-width: 20%;
   margin-left: 15px;
@@ -91,14 +91,14 @@ $c-home-nav__number-transition-delay-out: 250ms;
   svg {
     display: block;
     path {
-      fill: $c-home__underline-color;
+      fill: $c-home-underline__color;
     }
   }
 
 }
 
-.c-home__underline-line {
-  border-bottom: solid 1px $c-home__underline-color;
+.c-home-underline-line {
+  border-bottom: solid 1px $c-home-underline__color;
   margin-left: 15px;
   margin-right: 15px;
 }

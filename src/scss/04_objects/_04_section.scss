@@ -4,17 +4,18 @@
 /*----------------[ Variables ]----------------*/
 
 $o-section__padding-bottom: (
-  'xs':10px,
   'sm': 20px,
-  'md':40px
+  'md': 20px,
+  'lg': 40px
 );
 
 /*----------------[ Style ]----------------*/
 
 .o-section {
+  padding-bottom: 20px;
   @each $key, $value in $o-section__padding-bottom {
-    @media (min-width: map-get($s-breakpoints, #{$key})){
-      padding-bottom: map-get($o-section__padding-bottom, #{$key});
+    @include media-breakpoint-up(#{$key}) {
+      padding-bottom: $value;
     }
   }
 }

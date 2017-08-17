@@ -57,12 +57,12 @@ function profileMarker(){
   $('.c-home-nav__item').on("mouseenter",function(){
     var target = $(this).attr('data-item');
     translation = 25 * target;
-    $('.c-home__underline-mark').css({
+    $('.c-home-underline-mark').css({
       left: translation+'%'
     });
   });
   $('.c-home-nav__item').on("mouseleave",function(){
-    $('.c-home__underline-mark').css({
+    $('.c-home-underline-mark').css({
       left: '0%'
     });
   });
