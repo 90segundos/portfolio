@@ -15,9 +15,9 @@ body {
   @include font-size($s-font-size-sm);
   -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-  color: $s-color-grey-90;
+  color: $s-text-color;
   &.reversed {
-    color: $s-color-light;
+    color: $s-text-color-light;
   }
 }
 

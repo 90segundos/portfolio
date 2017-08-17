@@ -52,7 +52,7 @@ $s-color-greyscale: (
   '90': $s-color-grey-90
 );
 
-$s-color-primary: #38a4f3;
+$s-color-primary: #009982;
 $s-color-primary-light: lighten($s-color-primary, 10%);
 $s-color-primary-dark: desaturate(darken($s-color-primary,10%), 10);
 
@@ -76,8 +76,14 @@ $s-brand-colors: (
   'tertiary-dark' : $s-color-tertiary-dark
 );
 
+// background
 $s-background-color: $s-color-light;
 $s-background-color--reversed: $s-color-dark;
+
+// text color
+$s-text-color: $s-color-grey-90;
+$s-text-color-light: $s-color-light;
+
 
 // Fonts
 $s-font-size-xs: 10px;

@@ -13,9 +13,14 @@ $o-section__padding-bottom: (
 
 .o-section {
   padding-bottom: 20px;
+
   @each $key, $value in $o-section__padding-bottom {
     @include media-breakpoint-up(#{$key}) {
       padding-bottom: $value;
     }
+  }
+
+  &:last-child {
+    padding-bottom: 0;
   }
 }

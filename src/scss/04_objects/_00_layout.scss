@@ -1,0 +1,30 @@
+// Layout objects
+
+/*----------------[ Variables ]----------------*/
+
+$o-main-column__padding-top--sm: $s-header-height-sm;
+$o-main-column__padding-top--md: $s-header-height-md;
+
+/*----------------[ style ]----------------*/
+
+// Main container
+.o-main-container {
+  position: relative;
+  min-height: 100%;
+}
+
+// Main row
+.o-main-row {
+ position: absolute;
+ width: 100%;
+ min-height: 100%;
+}
+
+// Main column
+.o-main-column {
+  padding-top: $o-main-column__padding-top--sm;
+
+  @include media-breakpoint-up(sm){
+    padding-top: $o-main-column__padding-top--md;
+  }
+}

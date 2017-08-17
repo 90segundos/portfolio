@@ -6,8 +6,8 @@ $c-home__transition: all 800ms ease;
 
 
 
-$c-home-nav__number-color: rgba($s-color-light, .3);
-$c-home-nav__number-color--hover: rgba($s-color-light, 1);
+$c-home-nav__number-color: $s-color-grey-40;
+$c-home-nav__number-color--hover: $s-text-color;
 
 $c-home-underline__transition: left 500ms ease;
 $c-home-underline__transition-delay: 250ms;
@@ -15,8 +15,8 @@ $c-home-underline__color: $s-color-primary;
 
 $c-home-nav__number-transition-in: color 125ms ease-in;
 $c-home-nav__number-transition-out: color 125ms ease-out;
-$c-home-nav__number-transition-delay-in: 750ms;
-$c-home-nav__number-transition-delay-out: 250ms;
+$c-home-nav__number-transition-delay-in: 0;
+$c-home-nav__number-transition-delay-out: 0;
 
 
 /* ----------------[ style ]----------------*/
@@ -25,8 +25,7 @@ $c-home-nav__number-transition-delay-out: 250ms;
 
 }
 
-.c-home-center-row {
-
+.c-home-menu {
 }
 
 .c-home-nav {
@@ -87,9 +86,12 @@ $c-home-nav__number-transition-delay-out: 250ms;
   max-width: 20%;
   margin-left: 15px;
   left: 0;
+  background-color: $c-home-underline__color;
+  width: 100px;
+  height: 4px;
 
   svg {
-    display: block;
+    display: none;
     path {
       fill: $c-home-underline__color;
     }

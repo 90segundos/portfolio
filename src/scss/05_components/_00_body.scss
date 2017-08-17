@@ -15,7 +15,7 @@ $c-body__background-color--reversed: $s-background-color--reversed;
   background-position: center center;
 
   &.reversed {
-    background-color: $c-body__background-color;
+    background-color: $c-body__background-color--reversed;
   }
 
 }
