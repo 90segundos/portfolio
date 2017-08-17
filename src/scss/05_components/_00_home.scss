@@ -2,17 +2,88 @@
 
 /* ----------------[ variables ]----------------*/
 
-// Transition
-$c-home-menu__transition-property: transform;
-$c-home-menu__transition__timing-function: ease;
-$c-home-menu__transition-duration: 500ms;
-$c-home-menu__transition: $c-home-menu__transition-property $c-home-menu__transition-duration $c-home-menu__transition__timing-function;
+$c-home__transition: all 800ms ease;
+
+
+
+$c-home-nav__number-color: rgba($s-color-light, .3);
+$c-home__underline-transition: left 500ms ease;
+$c-home__underline-transition-delay: 250ms;
+$c-home__underline-color: #02c798;
 
 
 /* ----------------[ style ]----------------*/
 
+.c-home {
 
-.c-home-menu {
-  @include absoluteCenter();
-  transition: $c-home-menu__transition;
+}
+
+.c-home-center-row {
+
+}
+
+.c-home-nav {
+
+}
+
+.c-home-nav__list {
+
+}
+
+.c-home-nav__number {
+
+  // Default - mobile
+  display: block;
+  padding-bottom: $s-spacing-unit / 2;
+  color: $c-home-nav__number-color;
+  @include font-size( map-get($s-font-sizes,'sm') );
+
+
+  // Tablet - up
+  @include media-breakpoint-up(sm){
+    @include font-size( map-get($s-font-sizes,'sm') );
+  }
+}
+
+.c-home-nav__item {
+
+  font-weight: 500;
+  @include font-size( map-get($s-font-sizes,'md') );
+
+  // Desktop
+  @include media-breakpoint-up(sm) {
+    @include font-size( map-get($s-font-sizes,'lg') );
+  }
+}
+
+.c-home-nav__link {
+
+}
+
+// Underline
+.c-home__underline {
+  padding: $s-spacing-unit 0 0;
+}
+
+.c-home__underline-mark {
+  transition: $c-home__underline-transition;
+  transition-delay: $c-home__underline-transition-delay;
+  position: relative;
+  max-width: 20%;
+  margin-left: 15px;
+  left: 0;
+
+  svg {
+    display: block;
+    path {
+      fill: $c-home__underline-color;
+    }
+  }
+
+}
+
+.c-home__underline-line {
+  border-bottom: solid 1px $c-home__underline-color;
+  margin-left: 15px;
+  margin-right: 15px;
 }

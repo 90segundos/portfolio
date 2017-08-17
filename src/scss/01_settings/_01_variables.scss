@@ -16,7 +16,7 @@ $s-breakpoints: (
 );
 
 // Variables
-$s-spacing-unit: 16px;
+$s-spacing-unit: 15px;
 
 // Color
 $s-color-dark: #222222;
@@ -94,10 +94,10 @@ $s-font-sizes: (
 );
 
 // header sizing
-$s-header-height-sm: 50px;
-$s-header-height-md: 50px;
-$s-header-height-lg: 50px;
-$s-header-height-xl: 50px;
+$s-header-height-sm: 40px;
+$s-header-height-md: 40px;
+$s-header-height-lg: 40px;
+$s-header-height-xl: 40px;
 
 $s-header-heights: (
   'sm':$s-header-height-sm,

@@ -7,7 +7,7 @@
 
 var
   transition_time = 500; // Milliseconds
-  $activate_on_ready = $('.activate-on-ready');
+  $activate_on_ready = $('[data-trigger=ready]');
   $main_nav = $('.c-nav');
 
 
@@ -18,7 +18,7 @@ function activate(element){
   if(!element){
     return false;
   }else{
-    element.addClass('is-active');
+    element.addClass('active');
   }
 }
 
@@ -26,14 +26,14 @@ function deactivate(element){
   if(!element){
     return false;
   }else{
-    element.filter('.is-active').removeClass('is-active');
+    element.filter('.active').removeClass('active');
   }
 }
 
 function toggleActive(element){
   if(!element){
     return false;
-  }else if(element.hasClass('is-active')){
+  }else if(element.hasClass('active')){
     deactivate(element);
   }else{
     activate(element);
@@ -59,16 +59,15 @@ function buttonNavInit(){
 }
 
 function profileMarker(){
-  $('.c-profile-list__item').on("mouseenter",function(){
+  $('.c-home-nav__item').on("mouseenter",function(){
     var target = $(this).attr('data-item');
     translation = 25 * target;
-    console.log('hover '+target);
-    $('.c-profile-marker__mark').css({
+    $('.c-home__underline-mark').css({
       left: translation+'%'
     });
   });
-  $('.c-profile-list__item').on("mouseleave",function(){
-    $('.c-profile-marker__mark').css({
+  $('.c-home-nav__item').on("mouseleave",function(){
+    $('.c-home__underline-mark').css({
       left: '0%'
     });
   });
@@ -79,6 +78,6 @@ function profileMarker(){
 $(document).ready(function(){
   console.log('ready');
   buttonNavInit();
-  //activate($activate_on_ready);
+  activate($activate_on_ready);
   profileMarker();
 });

@@ -14,15 +14,15 @@
 @import "03_elements/01_reset";
 
 // Objects
+@import "04_objects/00_main-container";
+@import "04_objects/03_main-content";
 @import "04_objects/01_header";
 @import "04_objects/02_footer";
-@import "04_objects/03_main-content";
 
 // Components
 @import "05_components/00_body";
 @import "05_components/00_heading";
-@import "05_components/00_home-nav";
-@import "05_components/00_main-container";
+@import "05_components/00_home";
 @import "05_components/00_main-menu";
 @import "05_components/00_nav";
 @import "05_components/00_nav-button";

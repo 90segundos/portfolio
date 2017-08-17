@@ -1,5 +1,11 @@
 // Utilities
 
+/*----------------[ variables ]----------------*/
+
+$u-debug : false;
+
+/*----------------[ style ]----------------*/
+
 // Sizing
 .u-full-height {
   position: relative;
@@ -95,12 +101,11 @@
 }
 
 // Debug
-.u-outline {
-  outline: solid 1px dodgerblue;
-  &--green {
-    outline-color: limegreen;
+
+@if $u-debug {
+
+  *[class] {
+    @include outlineRecursive('*[class]',transparentize(coral,.6),80deg,6);
   }
-  &--red {
-    outline-color: #db5555;
-  }
+
 }
