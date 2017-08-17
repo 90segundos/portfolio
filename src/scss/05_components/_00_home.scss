@@ -7,9 +7,16 @@ $c-home__transition: all 800ms ease;
 
 
 $c-home-nav__number-color: rgba($s-color-light, .3);
+$c-home-nav__number-color--hover: rgba($s-color-light, 1);
+
 $c-home__underline-transition: left 500ms ease;
 $c-home__underline-transition-delay: 250ms;
-$c-home__underline-color: #02c798;
+$c-home__underline-color: rgba($s-color-light, .3);
+
+$c-home-nav__number-transition-in: color 125ms ease-in;
+$c-home-nav__number-transition-out: color 125ms ease-out;
+$c-home-nav__number-transition-delay-in: 750ms;
+$c-home-nav__number-transition-delay-out: 250ms;
 
 
 /* ----------------[ style ]----------------*/
@@ -37,7 +44,8 @@ $c-home__underline-color: #02c798;
   padding-bottom: $s-spacing-unit / 2;
   color: $c-home-nav__number-color;
   @include font-size( map-get($s-font-sizes,'sm') );
-
+  transition: $c-home-nav__number-transition-out;
+  transition-delay: $c-home-nav__number-transition-delay-out;
 
   // Tablet - up
   @include media-breakpoint-up(sm){
@@ -54,6 +62,13 @@ $c-home__underline-color: #02c798;
   @include media-breakpoint-up(sm) {
     @include font-size( map-get($s-font-sizes,'lg') );
   }
+
+  &:hover .c-home-nav__number {
+    transition: $c-home-nav__number-transition-in ;
+    transition-delay: $c-home-nav__number-transition-delay-in;
+    color:  $c-home-nav__number-color--hover;
+  }
+
 }
 
 .c-home-nav__link {
